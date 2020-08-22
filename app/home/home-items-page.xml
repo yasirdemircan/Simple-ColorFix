@@ -1,0 +1,99 @@
+<Page
+     xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:cv="nativescript-canvas" navigatingTo="navigatingTo" class="page"  loaded="filter"
+>
+    <ActionBar height = "11%">
+        <Label style="font-size:12px" text="Simple ColorFx"></Label>
+    </ActionBar>
+    <StackLayout>
+
+
+    <Image width="70%" height="50%" loaded="onImageLoad" onTap="importImage" stretch="aspectFit" src="~/images/pickimage.png"></Image>
+    
+    <StackLayout>
+        <StackLayout  visibility="collapse" id = " ms " loaded="mainStackLoaded">
+            <!--
+            <StackLayout>
+                <Button text="Test" tap="draw" />
+            </StackLayout>-->
+          
+          <StackLayout id="savereset" >
+                <Button class="-lemon" text="Save" tap="savePNG" />
+                <Button class="-lemon" text="Reset" tap="reset" />
+                </StackLayout>
+            <ScrollView>
+          <StackLayout id="sliders" >
+              
+              <StackLayout  verticalAlignment="center" horizontalAlignment="center" orientation = "vertical">
+                  <StackLayout  width="100%">
+                   <Label textAlignment="center" style="font-size:20px"  fontAttributes="Bold" text="--Primary Colors--"></Label>
+                  </StackLayout>
+               
+               <StackLayout width="100%">
+                <Label textAlignment="center" text="Red Amount"  ></Label>
+                    <!-- <TextField id="redVal" text="255" maxLength="3" keyboardType = "number" hint="Red"></TextField>-->
+                   <Slider id="redVal" backgroundColor="red" color="red" value="255" minValue="0" maxValue="255" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                    <StackLayout width="100%">
+                    <Label textAlignment="center" text="Green Amount" ></Label>
+                       <Slider backgroundColor="green" color="green" id="greenVal" value="255" minValue="0" maxValue="255" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                    <StackLayout width="100%">
+                <Label textAlignment="center" text="Blue Amount"></Label>
+                    <Slider id="blueVal" backgroundColor="blue" color="blue" value="255" minValue="0" maxValue="255" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                  
+            
+              </StackLayout>
+              <StackLayout  width="100%">
+                   <Label textAlignment="center" style="font-size:20px"  fontAttributes="Bold" text="--Adjustments--"></Label>
+                  </StackLayout>
+                        <StackLayout verticalAlignment="center" horizontalAlignment="center" orientation = "vertical">
+               <StackLayout width="100%" >
+                <Label textAlignment="center" text="Saturation"></Label>
+                    <!-- <TextField id="redVal" text="255" maxLength="3" keyboardType = "number" hint="Red"></TextField>-->
+                   <Slider  id="satVal" value="40" minValue="0" maxValue="200" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                    <StackLayout width="100%">
+                    <Label textAlignment="center" text="Brightness" ></Label>
+                       <Slider id="brightVal" value="40" minValue="20" maxValue="200" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                            <StackLayout width="100%">
+                    <Label textAlignment="center" text="Contrast" ></Label>
+                       <Slider id="contrVal" value="40" minValue="20" maxValue="200" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                                 <StackLayout width="100%">
+                    <Label textAlignment="center" text="Blur" ></Label>
+                       <Slider id="blurVal" value="1" minValue="1" maxValue="250" loaded="onSliderLoaded"></Slider>
+                  </StackLayout>
+                                       
+                   <Label textAlignment="center" style="font-size:20px"  fontAttributes="Bold" text="--Effects--"></Label>
+             
+                                            <StackLayout width="100%">
+                    <Label textAlignment="center"  text="Sharpness" ></Label>
+                        <Switch checked="false" id="sharpVal"  verticalAlignment="center" horizontalAlignment="center" id="sharpVal" loaded="onCheckLoaded"/>
+                  </StackLayout>
+                                             <StackLayout width="100%">
+                    <Label textAlignment="center"  text="Binary Color" ></Label>
+                        <Switch checked="false"  verticalAlignment="center" horizontalAlignment="center" id="binaryVal" loaded="onCheckLoaded"/>
+                  </StackLayout>
+                                                     <StackLayout width="100%">
+                    <Label textAlignment="center"  text="Invert Colors" ></Label>
+                        <Switch checked="false" id="invertVal"  verticalAlignment="center" horizontalAlignment="center"  loaded="onCheckLoaded"/>
+                  </StackLayout>
+                    <!--<StackLayout width="300px">
+                      
+                <Label textAlignment="center" text="Blue"></Label>
+                    <Slider id="blueVal" value="255" minValue="0" maxValue="255"></Slider>
+                  </StackLayout>-->
+                  
+            
+              </StackLayout>
+               <!--<Button text="Import" tap="importImage" />-->
+                </StackLayout>
+                </ScrollView>
+        </StackLayout>
+     
+    </StackLayout>
+            </StackLayout>
+</Page>

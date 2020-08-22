@@ -1,0 +1,34 @@
+{
+  "nativescript": {
+    "id": "io.simplecolorfx",
+    "tns-ios": {
+      "version": "6.5.0"
+    },
+    "tns-android": {
+      "version": "6.5.3"
+    }
+  },
+  "description": "Simple image processing/filtering app",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "lint": "eslint \"app/**/*.js\""
+  },
+  "dependencies": {
+    "@nativescript/theme": "~2.3.0",
+    "nativescript-bitmap-factory": "^1.8.1",
+    "nativescript-canvas": "^3.0.10",
+    "nativescript-imagepicker": "^7.1.0",
+    "nativescript-lottie": "4.0.1",
+    "nativescript-permissions": "^1.3.9",
+    "nativescript-screenshot": "0.0.2",
+    "tns-core-modules": "~6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "~5.8.0",
+    "nativescript-dev-webpack": "~1.5.0",
+    "node-sass": "^4.7.1"
+  },
+  "gitHead": "20a65d338ae8f8911087ab6615b89363f864b07b",
+  "readme": "NativeScript Application"
+}
